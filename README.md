@@ -3,6 +3,7 @@ Classification of continuous gravitational wave candidates with a random forest
 ---
 
 <img src="./Figures/GR_warpedSpaceTime.jpg" style="max-height: 100px; max-width: 100px;">
+<img src="./Figures/GR_warpedSpaceTime.jpg" height=20 width=100 >
 
 If you've been paying attention to science news over the last year or two, you'd notice that [_gravitational waves_](https://en.wikipedia.org/wiki/Gravitational_wave) have revolutionized how we see (or 'hear') the Universe. Looking into data from the [LIGO](www.ligo.org) gravitational-wave observatories, we have seen the largest
 
