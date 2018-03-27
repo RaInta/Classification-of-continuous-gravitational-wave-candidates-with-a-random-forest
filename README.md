@@ -16,19 +16,26 @@ However, we have yet to see gravitational waves from spinning neutron stars. I s
 
 These searches are very expensive (each target took almost half a million CPU hours on a modern computing cluster). They generate a _lot_ of potential candidates. Currently, these have to be checked manually, by hand, to rule out if they are the result of something physically plausible, or are merely artifacts of the instruments (which we expect most of them to be). This is a problem ripe for an attack from Machine Learning!
 
-We will apply a Random Forest classifier to classify potential candidates as detections ('signal'), instrumental lines ('line') or merely noise ('noise').
+
+Candidates can look like this:
+
+<img src=".Figures/Candidate1_2F_freq.png" width=640>
+
+or this:
+
+<img src=".Figures/Candidate2_2F_freq.png" width=640>
+
+To cut down on the tedium and manpower required to perform such classification, we wish to construct a classifier to classify potential candidates as detections ('signal'), instrumental lines ('line') or merely noise ('noise').
 
 
 ## Selecting an appropriate Machine Learning algorithm
 
-Deep Learning is currently a (sometimes expensive) hammer looking for any nail it can find. And it's been doing surprisingly well. However, one issue with internalizing features, one of the beauties of Deep Learning, is that it can make interpretation of _how_ features were selected. In the words of the famous physicist Eugene Wigner: "It's nice that the computer understands the problem. But I would like to understand it too."
+Deep Learning is currently a (sometimes expensive) hammer looking for any nail it can find. And it does this surprisingly well. However, one issue with internalizing features, one of the beauties of Deep Learning, is that it can make interpretation of _how_ features were selected. In the words of the famous physicist Eugene Wigner: "It's nice that the computer understands the problem. But I would like to understand it too."
 
-Depending upon how features are distributed within the parameter space of the data, a variety of Machine Learning algorithms (MLAs) could be applied. One that goes a surprising way, that is fairly robust, conceptually simple (and obviously one of my favorites) is the random forest.
+Depending upon how features are distributed within the parameter space of the data, a variety of Machine Learning algorithms (MLAs) could be applied. One that goes a surprising way, that is fairly robust, conceptually simple (and obviously one of my favorites) is the random forest. 
 
 <img src=".Figures/RndForestOverview_neg.png" width=640>
 
-<img src=".Figures/Candidate1_2F_freq.png" width=640>
-<img src=".Figures/Candidate2_2F_freq.png" width=640>
 <img src=".Figures/Candidate5_2F_freq.png" width=640>
 <img src=".Figures/cleaned_candidate_histogram_18000.png" width=640>
 <img src=".Figures/ksStat_36301.png" width=640>
