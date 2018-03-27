@@ -19,11 +19,11 @@ These searches are very expensive (each target took almost half a million CPU ho
 
 Candidates can look like this:
 
-<img src=".Figures/Candidate1_2F_freq.png" width=640>
+<img src="./Figures/Candidate1_2F_freq.png" width=640>
 
 or this:
 
-<img src=".Figures/Candidate2_2F_freq.png" width=640>
+<img src="./Figures/Candidate2_2F_freq.png" width=640>
 
 To cut down on the tedium and manpower required to perform such classification, we wish to construct a classifier to classify potential candidates as detections ('signal'), instrumental lines ('line') or merely noise ('noise').
 
@@ -34,12 +34,12 @@ Deep Learning is currently a (sometimes expensive) hammer looking for any nail i
 
 Depending upon how features are distributed within the parameter space of the data, a variety of Machine Learning algorithms (MLAs) could be applied. One that goes a surprising way, that is fairly robust, conceptually simple (and obviously one of my favorites) is the random forest. 
 
-<img src=".Figures/RndForestOverview_neg.png" width=640>
+<img src="./Figures/RndForestOverview_neg.png" width=640>
 
-<img src=".Figures/Candidate5_2F_freq.png" width=640>
-<img src=".Figures/cleaned_candidate_histogram_18000.png" width=640>
-<img src=".Figures/ksStat_36301.png" width=640>
-<img src=".Figures/ksStat_P2_0.png" width=640>
-<img src=".Figures/RaTTUSelfie_Escher.png" width=640>
-<img src=".Figures/RndForestOverview.png" width=640>
-<img src=".Figures/vetoed_line_VelaJr_10.png" width=640>
+<img src="./Figures/Candidate5_2F_freq.png" width=640>
+<img src="./Figures/cleaned_candidate_histogram_18000.png" width=640>
+<img src="./Figures/ksStat_36301.png" width=640>
+<img src="./Figures/ksStat_P2_0.png" width=640>
+<img src="./Figures/RaTTUSelfie_Escher.png" width=640>
+<img src="./Figures/RndForestOverview.png" width=640>
+<img src="./Figures/vetoed_line_VelaJr_10.png" width=640>
