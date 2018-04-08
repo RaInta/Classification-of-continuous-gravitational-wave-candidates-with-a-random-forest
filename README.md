@@ -25,6 +25,8 @@ or this:
 
 <img src="./Figures/Candidate2_2F_freq.png" width=640>
 
+But both of these are obviously noise because of the broad, high amplitude features.
+
 To cut down on the tedium and manpower required to perform such classification, we wish to construct a classifier to classify potential candidates as detections ('signal'), instrumental lines ('line') or merely noise ('noise').
 
 
@@ -35,6 +37,39 @@ Deep Learning is currently a (sometimes expensive) hammer looking for any nail i
 Depending upon how features are distributed within the parameter space of the data, a variety of Machine Learning algorithms (MLAs) could be applied. One that goes a surprising way, that is fairly robust, conceptually simple (and obviously one of my favorites) is the random forest. 
 
 <img src="./Figures/RndForestOverview.png" width=640>
+(Figure adapted from James, G., _et al._: “An Introduction to Statistical Learning with Applications in R,” _Springer_, New York, (2014))
+
+Some advantages to a random forest approach:
+
+* Robust—designed to reduce over-fitting
+* Simple to apply
+* Relatively simple to interpret factors
+* Fairly good performance (accuracy of classifier)
+* Fairly low computational complexity (i.e. ‘good’ run-time)
+
+And some disadvantages:
+* Can require a lot of training data, depending on quality of feature set
+* Likely to be out-performed by other methods in case of simple (or very complex) decision boundaries
+
+
+Calculation of computational complexity:
+Assuming trees built from unpruned CARTs (Classification And Regression Tree), complexity of each tree is O( m n log(n) )
+for n number of records/instances and m number of variables/attributes.
+Growing M trees gives you O(M m n log(n) ) (worst case scenario, as convergence may occur a lot earlier) .
+
+
+Here, we'll use the Random Forest functions supplied by the scikit-learn Python library.
+
+## Data selection
+
+LIGO gravitational wave data
+
+## Feature set
+
+Compromises:
+
+  * Have to fix support of histograms (2F_max = 200; clip real 2Fs)
+
 
 <img src="./Figures/Candidate5_2F_freq.png" width=640>
 <img src="./Figures/cleaned_candidate_histogram_18000.png" width=640>
